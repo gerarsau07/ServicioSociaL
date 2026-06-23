@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_inicio" android:icon="@android:drawable/ic_menu_myplaces" android:title="Inicio" />
+        <item android:id="@+id/nav_mi_perfil" android:icon="@android:drawable/ic_menu_info_details" android:title="Mi Perfil" />
+        <item android:id="@+id/nav_mis_requisitos" android:icon="@android:drawable/ic_menu_agenda" android:title="Mis Requisitos" />
+        <item android:id="@+id/nav_entidades_receptoras" android:icon="@android:drawable/ic_menu_compass" android:title="Entidades Receptoras" />
+        <item android:id="@+id/nav_solicitudes" android:icon="@android:drawable/ic_menu_send" android:title="Solicitudes" />
+        <item android:id="@+id/nav_mis_actividades" android:icon="@android:drawable/ic_menu_edit" android:title="Mis Actividades" />
+        <item android:id="@+id/nav_documentos" android:icon="@android:drawable/ic_menu_view" android:title="Documentos" />
+        <item android:id="@+id/nav_notificaciones" android:icon="@android:drawable/ic_menu_recent_history" android:title="Notificaciones" />
+        <item android:id="@+id/nav_reportes_avance" android:icon="@android:drawable/ic_menu_sort_by_size" android:title="Reportes de Avance" />
+        <item android:id="@+id/nav_carta_liberacion" android:icon="@android:drawable/ic_menu_save" android:title="Carta de Liberación" />
+        <item android:id="@+id/nav_solicitar_baja" android:icon="@android:drawable/ic_menu_close_clear_cancel" android:title="Solicitar Baja" />
+        <item android:id="@+id/nav_chat" android:icon="@android:drawable/ic_menu_send" android:title="Chat" />
+        <item android:id="@+id/nav_calendario" android:icon="@android:drawable/ic_menu_month" android:title="Calendario" />
+        <item android:id="@+id/nav_ajustes" android:icon="@android:drawable/ic_menu_preferences" android:title="Ajustes" />
+    </group>
+    <item android:title="">
+        <menu>
+            <item android:id="@+id/nav_cerrar_sesion" android:icon="@android:drawable/ic_menu_revert" android:title="Cerrar sesión" />
+        </menu>
+    </item>
+</menu>
