@@ -1,13 +1,451 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <View
+        android:id="@+id/header_calendario"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/primary_purple"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tv_title_calendario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:text="Calendario"
-        android:textSize="24sp" />
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/header_calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_calendario" />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/ic_menu_sort_alphabetically"
+        app:layout_constraintBottom_toBottomOf="@id/header_calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_calendario"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <!-- Selector de Vista -->
+    <LinearLayout
+        android:id="@+id/view_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header_calendario">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mes"
+            android:backgroundTint="@color/primary_purple"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Semana"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/text_grey"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider_color"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Agenda"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/text_grey"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider_color"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_selector">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Navegación de Mes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="@color/text_grey"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:text="Junio 2026"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_next"
+                    app:tint="@color/text_grey"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <!-- Grid de Calendario (Mockup Simplificado) -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginTop="8dp">
+
+                <TableRow android:paddingVertical="8dp">
+                    <TextView android:text="LUN" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                    <TextView android:text="MAR" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                    <TextView android:text="MIÉ" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                    <TextView android:text="JUE" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                    <TextView android:text="VIE" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                    <TextView android:text="SÁB" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                    <TextView android:text="DOM" android:gravity="center" android:textSize="12sp" android:textColor="@color/text_grey" />
+                </TableRow>
+
+                <TableRow android:paddingVertical="12dp">
+                    <TextView android:text="1" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="2" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="3" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="4" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="5" android:gravity="center" android:textColor="@color/black" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical">
+                        <TextView android:text="6" android:textColor="@color/black" />
+                        <View android:layout_width="4dp" android:layout_height="4dp" android:background="@color/success_green" />
+                    </LinearLayout>
+                    <TextView android:text="7" android:gravity="center" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:paddingVertical="12dp">
+                    <TextView android:text="8" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="9" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="10" android:gravity="center" android:textColor="@color/white" android:background="@drawable/circle_success_bg" android:backgroundTint="@color/primary_purple" />
+                    <TextView android:text="11" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="12" android:gravity="center" android:textColor="@color/black" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical">
+                        <TextView android:text="13" android:textColor="@color/black" />
+                        <View android:layout_width="4dp" android:layout_height="4dp" android:background="@color/success_green" />
+                    </LinearLayout>
+                    <TextView android:text="14" android:gravity="center" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:paddingVertical="12dp">
+                    <TextView android:text="15" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="16" android:gravity="center" android:textColor="@color/black" android:background="@drawable/circle_success_bg" android:backgroundTint="@color/section_options" />
+                    <TextView android:text="17" android:gravity="center" android:textColor="@color/black" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical">
+                        <TextView android:text="18" android:textColor="@color/black" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <View android:layout_width="4dp" android:layout_height="4dp" android:background="@color/success_green" />
+                            <View android:layout_width="4dp" android:layout_height="4dp" android:layout_marginStart="2dp" android:background="@color/success_green" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:text="19" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="20" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="21" android:gravity="center" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:paddingVertical="12dp">
+                    <TextView android:text="22" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="23" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="24" android:gravity="center" android:textColor="@color/white" android:background="@drawable/circle_success_bg" android:backgroundTint="@color/success_green" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical">
+                        <TextView android:text="25" android:textColor="@color/black" />
+                        <View android:layout_width="4dp" android:layout_height="4dp" android:background="@color/success_green" />
+                    </LinearLayout>
+                    <TextView android:text="26" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="27" android:gravity="center" android:textColor="@color/black" />
+                    <TextView android:text="28" android:gravity="center" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow android:paddingVertical="12dp">
+                    <TextView android:text="29" android:gravity="center" android:textColor="@color/black" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical">
+                        <TextView android:text="30" android:textColor="@color/black" />
+                        <View android:layout_width="4dp" android:layout_height="4dp" android:background="@color/success_green" />
+                    </LinearLayout>
+                    <TextView /> <TextView /> <TextView /> <TextView /> <TextView />
+                </TableRow>
+            </TableLayout>
+
+            <!-- Próximos eventos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Próximos eventos"
+                android:textColor="@color/primary_purple"
+                android:textStyle="bold" />
+
+            <!-- Evento 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="40dp"
+                        android:background="@color/primary_purple" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@android:drawable/ic_menu_save"
+                        app:tint="@color/primary_purple"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Entrega de evidencia semanal"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DIF Estatal Puebla - Apoyo comunitario"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 de junio, 2026 • 11:59 PM"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Evento 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="40dp"
+                        android:background="@color/section_options" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@android:drawable/ic_menu_agenda"
+                        app:tint="@color/section_options"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reunión con coordinador"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Universidad Politécnica de Puebla"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="16 de junio, 2026 • 10:00 AM"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Evento 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="40dp"
+                        android:background="@color/success_green" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        app:tint="@color/success_green"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha límite de reporte mensual"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Todas las entidades"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24 de junio, 2026 • 11:59 PM"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Evento 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="40dp"
+                        android:background="@color/primary_purple" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@android:drawable/ic_menu_view"
+                        app:tint="@color/primary_purple"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Capacitación obligatoria"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UPP - Aula 3"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30 de junio, 2026 • 9:00 AM"
+                            android:textColor="@color/text_grey"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

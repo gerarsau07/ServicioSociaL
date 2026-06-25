@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/nav_mis_actividades"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Actividades" />
+    <item
+        android:id="@+id/nav_entidades_receptoras"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Entidades" />
+    <item
+        android:id="@+id/nav_solicitudes"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Solicitudes" />
+    <item
+        android:id="@+id/nav_mi_perfil"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Perfil" />
+</menu>

@@ -2,4 +2,26 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta de colores principal -->
+    <color name="primary_purple">#512DA8</color>
+    <color name="background_light">#F5F7FB</color>
+    <color name="text_grey">#757575</color>
+
+    <!-- Colores de sección -->
+    <color name="section_academic">#2E7D32</color>
+    <color name="section_status">#512DA8</color>
+    <color name="section_options">#FBC02D</color>
+
+    <!-- Colores de estado -->
+    <color name="success_green">#4CAF50</color>
+    <color name="success_container">#E8F5E9</color>
+    <color name="notification_red">#E53935</color>
+
+    <!-- Otros acentos -->
+    <color name="accent_pink">#E91E63</color>
+    <color name="container_pink">#FCE4EC</color>
+    <color name="accent_purple">#673AB7</color>
+    <color name="container_purple">#EDE7F6</color>
+    <color name="divider_color">#F0F0F0</color>
 </resources>
