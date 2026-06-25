@@ -187,8 +187,7 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
                     app:strokeColor="@color/text_grey"
-                    app:strokeWidth="1dp"
-                    app:strokePattern="dash">
+                    app:strokeWidth="1dp">
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"

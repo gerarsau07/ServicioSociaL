@@ -11,7 +11,7 @@
         android:id="@+id/header_bg"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:background="@color/primary_blue"
+        android:background="@color/primary_purple"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -112,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Horas completadas"
-                        android:textColor="@color/primary_blue"
+                        android:textColor="@color/primary_purple"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +152,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:progress="50"
-                            app:indicatorColor="@color/primary_blue"
+                            app:indicatorColor="@color/primary_purple"
                             app:indicatorSize="90dp"
                             app:trackColor="@color/divider_color"
                             app:trackThickness="10dp" />
@@ -176,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Próximas actividades"
-                android:textColor="@color/primary_blue"
+                android:textColor="@color/primary_purple"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -355,7 +355,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:text="Ver todas"
-                        android:textColor="@color/primary_blue"
+                        android:textColor="@color/primary_purple"
                         android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -366,7 +366,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Notificaciones recientes"
-                android:textColor="@color/primary_blue"
+                android:textColor="@color/primary_purple"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -534,7 +534,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:text="Ver todas"
-                        android:textColor="@color/primary_blue"
+                        android:textColor="@color/primary_purple"
                         android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

@@ -11,7 +11,7 @@
         android:id="@+id/header_requisitos"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/primary_blue"
+        android:background="@color/primary_purple"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -255,7 +255,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="24dp"
-                android:backgroundTint="@color/primary_blue"
+                android:backgroundTint="@color/primary_purple"
                 android:text="Continuar"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
