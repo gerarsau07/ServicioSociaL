@@ -24,4 +24,9 @@
     <color name="accent_purple">#673AB7</color>
     <color name="container_purple">#EDE7F6</color>
     <color name="divider_color">#F0F0F0</color>
+    
+    <!-- Colores Institucionales UPP -->
+    <color name="upp_primary">#003366</color>
+    <color name="upp_success">#28a745</color>
+    <color name="upp_warning">#dc3545</color>
 </resources>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +11,7 @@
         android:id="@+id/header_requisitos"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/primary_blue"
+        android:background="@color/upp_primary"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -129,6 +129,7 @@
                     app:layout_constraintBottom_toBottomOf="parent">
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progress_mis_requisitos"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:progress="68"
@@ -145,6 +146,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_mis_requisitos_creditos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="68%"
@@ -204,6 +206,7 @@
                             android:textColor="@color/text_grey"
                             android:textSize="13sp" />
                         <TextView
+                            android:id="@+id/tv_mis_requisitos_cursados"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="68%"
@@ -251,12 +254,12 @@
                 android:textSize="14sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_continuar"
+                android:id="@+id/btn_verificar_creditos"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="24dp"
-                android:backgroundTint="@color/primary_blue"
-                android:text="Continuar"
+                android:backgroundTint="#003366"
+                android:text="Verificar Créditos"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textStyle="bold"

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -175,7 +175,7 @@
                         tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Botón de añadir -->
+                <!-- Bot�n de a�adir -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -188,7 +188,7 @@
                     app:cardElevation="0dp"
                     app:strokeColor="@color/text_grey"
                     app:strokeWidth="1dp"
-                    app:strokePattern="dash">
+                    >
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"

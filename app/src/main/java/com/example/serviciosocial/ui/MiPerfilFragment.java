@@ -15,6 +15,15 @@ public class MiPerfilFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mi_perfil, container, false);
+        View view = inflater.inflate(R.layout.fragment_mi_perfil, container, false);
+        
+        android.widget.TextView tvCreditos = view.findViewById(R.id.tv_creditos_perfil);
+        if (tvCreditos != null) {
+            android.content.SharedPreferences prefs = requireActivity().getSharedPreferences("MisCreditos", android.content.Context.MODE_PRIVATE);
+            int creditos = prefs.getInt("verified_credits", 68); // 68 por defecto si no ha verificado
+            tvCreditos.setText(creditos + "%");
+        }
+        
+        return view;
     }
 }
